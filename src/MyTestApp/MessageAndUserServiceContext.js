@@ -1,11 +1,11 @@
 import {useState, useTransition, useDeferredValue, useEffect, useId} from 'react';
-import UserContext, {useUserContext} from './context';
+import UserContext, {useUserContext} from './UserContext';
 import { fetchApi, asyncCall, promiseCall } from './fetchApi';
 import WelcomeComp from './WelcomeComp';
 import MessageButton from './MessageButton';
 import MessageServiceContext from './MessageServiec';
 
-function App() {
+function MessageAndUserServiceContext() {
   const [text, settext] = useState('');
   const [data, setData] = useState('');
   const [isPending, startTransition] = useTransition();
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="app-header">
       <div style={{display: 'flex', backgroundColor: 'yellow', alignItems: 'center'}}> 
         {/* <div><img src={logo} width={50}  heigh={50} className="App-logo" alt="app-logo" /> </div> */}
           <div style={{flexGrow: 1}}> This is a header row - {id} </div>
@@ -103,44 +103,4 @@ function App() {
   );
 }
 
-export default App;
-// import React, { useState, useEffect } from 'react';
-
-// const  App  = (props)  => {
-//   const [timer, setTimer] = useState(0);
-//   const [timerOn, setTimerOn] = useState(false);
-
-//     useEffect(()  =>  {
-//             console.log("on UseEffect ");
-//            let _timer = null;
-//           if (timerOn) {
-//             _timer = setInterval(() => {
-//                 setTimer(timer => timer + 1);
-//             }, 1000);
-//           }
-//         return () => {  
-//             console.log('on Return  ');
-//             _timer && clearInterval(_timer); 
-//         };
-//     }, [ timerOn]);
-
-//   const startTimer = () => {
-//       setTimerOn(true);
-//   };
-
-//   const stopTimer = () => {
-//        setTimerOn(false);
-//   };
-
-//   return (
-//     <div className='App'>
-//       <h1>Hello React.</h1>
-//       <h2>Start editing to see some magic happen!</h2>
-//       <div> {timer} </div>
-//       <button onClick={startTimer}> Start </button>
-//       <button onClick={stopTimer}> Stop </button>
-//     </div>
-//   );
-// }
-
-// export default App;
+export default MessageAndUserServiceContext;

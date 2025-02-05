@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 
-const MyApp = (props) => {
+const CounterApp = (props) => {
 //    const [value, setValue] = useState(10);
 //    const increase = () => setValue(value => value + 1);
 //    const decrease = () => setValue(value => value - 1);
@@ -26,4 +26,4 @@ const useCounter = (initialValue = 0) => {
     return { cValue, setCValue, increase, decrease};
 }
 
-export default MyApp;
+export default CounterApp;

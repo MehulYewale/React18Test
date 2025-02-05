@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import MyTestApp from './MyTestApp/MyTestApp';
+import ReduxApp from './ReduxApp/ReduxApp';
+import PokemonApp from './Pokemon';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <ReduxApp /> */}
+    {/* <PokemonApp /> */}
     {/* <App /> */}
     <MyTestApp />
   </React.StrictMode>

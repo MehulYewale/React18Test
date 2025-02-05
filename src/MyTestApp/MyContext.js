@@ -4,7 +4,7 @@ const _myContext = React.createContext("44444444");
 
 const {Provider, Consumer} = _myContext;
 
-export default function MyTest() {
+export default function MyContext() {
     const [value, setValue] = useState("");
     const [showList,  setShowList] = useState(false);
     const myRef = useRef(null);

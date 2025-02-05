@@ -1,4 +1,4 @@
-import { useUserContext } from "./context";
+import { useUserContext } from "./UserContext";
 
 const WelcomeComp = () => {
  const user = useUserContext();

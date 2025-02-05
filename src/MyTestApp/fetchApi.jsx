@@ -14,7 +14,8 @@ export const fetchApi = () => {
 
 export const asyncCall = async() => {
     const data = await fetch('http://jsonplaceholder.typicode.com/users');
-    data.json().then(jsonData => console.log('asyncCall', jsonData)).catch((error) => {
+    data.json().then(jsonData => console.log('asyncCall', jsonData))
+    .catch((error) => {
         console.error(error);
     });
 }

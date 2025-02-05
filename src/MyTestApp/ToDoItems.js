@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from 'react';
 
-const MyApp2 = () => {
+const ToDoItems = () => {
     const [items, setItems] = useState([]);
     const [value, setValue] = useState('');
     const [editRecordIndex, setEditRecordIndex] = useState(-1);
@@ -58,6 +58,4 @@ const MyApp2 = () => {
 
 }
 
-
-
-export default MyApp2;
+export default ToDoItems;
